@@ -102,7 +102,7 @@ $_lang['gallery.xpdozip_err_nf'] = 'Nie można załadować klasy xPDOZip.';
 $_lang['gallery.zip_err_ns'] = 'Proszę wskazać archiwum zip.';
 $_lang['gallery.zip_err_unpack'] = 'Nie można rozpakować archiwum zip. Proszę sprawdzić czy przesłane archiwum nie jest uszkodzone oraz czy ustawienia ścieżek do plików galerii są poprawne.';
 $_lang['gallery.zip_file'] = 'Archiwum Zip';
-$_lang['gallery.zip_upload'] = 'Przesłanie archiwum Zip';
+$_lang['gallery.zip_upload'] = 'Przesyłanie archiwum Zip';
 $_lang['gallery.zip_upload_intro'] = 'Wybierz archiwum zip zawierające obrazy do przesłania. Galeria rozpakuje archiwum i umieści obrazy w bieżącym albumie.';
 
 $_lang['area_backend'] = 'Zaplecze galerii';
