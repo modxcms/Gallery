@@ -27,7 +27,7 @@
  * @subpackage lexicon
  */
 $_lang['gallery.active'] = 'Aktywny';
-$_lang['gallery.alt_text'] = 'Tekst alternatywny (alt)';
+$_lang['gallery.alt_text'] = 'Tekst alternatywny (znacznik alt)';
 $_lang['gallery.browser'] = 'Przeglądarka galerii';
 $_lang['gallery.choose_item'] = 'Wybierz obraz';
 $_lang['gallery.class'] = 'Klasy CSS';
@@ -53,7 +53,7 @@ $_lang['gallery.pos_t'] = 'Góra';
 $_lang['gallery.pos_tr'] = 'Prawy górny';
 $_lang['gallery.pos_tl'] = 'Lewy górny';
 $_lang['gallery.resize'] = 'Zmień rozmiar';
-$_lang['gallery.rotate'] = 'Obróć';
+$_lang['gallery.rotate'] = 'Obrót';
 $_lang['gallery.tags'] = 'Znaczniki';
 $_lang['gallery.title'] = 'Tytuł';
 $_lang['gallery.watermark_options'] = 'Opcje znaku wodnego';

@@ -34,22 +34,19 @@ $_lang['gallery.album'] = 'Album';
 $_lang['gallery.album_create'] = 'Utwórz album';
 $_lang['gallery.album_err_nf'] = 'Nie znaleziono albumu.';
 $_lang['gallery.album_err_ns'] = 'Nie określono albumu.';
-$_lang['gallery.album_err_ns_name'] = 'Proszę podać poprawną nazwę dla albumu.';
+$_lang['gallery.album_err_ns_name'] = 'Proszę podać poprawną nazwę albumu.';
 $_lang['gallery.album_err_remove'] = 'Wystąpił błąd poczas próby usunięcia albumu.';
 $_lang['gallery.album_err_save'] = 'Wystąpił błąd podczas próby zapisania albumu.';
 $_lang['gallery.album_remove'] = 'Usuń album';
-$_lang['gallery.album_remove_confirm'] = 'Czy na pewno chcesz usunąć ten album? Wszystkie elementy, które nie wchodzą w skład żadnego
-innego albumu zostaną także usunięte.';
+$_lang['gallery.album_remove_confirm'] = 'Czy na pewno chcesz usunąć ten album? Wszystkie elementy, które nie wchodzą w skład żadnego innego albumu zostaną także usunięte.';
 $_lang['gallery.album_update'] = 'Aktualizuj album';
 $_lang['gallery.albums'] = 'Albumy';
 $_lang['gallery.back'] = 'Wstecz';
 $_lang['gallery.batch_upload'] = 'Przesyłanie wsadowe';
-$_lang['gallery.batch_upload_intro'] = 'Określ katalog w systemie plików na serwerze, w którym szukać zdjęć. Możesz użyć
-zmiennych {base_path}, {core_path} lub {assets_path}.';
-$_lang['gallery.batch_upload_tags'] = 'Znaczniki, które zostaną przypisane do przesłanych zdjęć, zapisane w formie listy oddzielonej
-przecinkami.';
+$_lang['gallery.batch_upload_intro'] = 'Określ katalog w systemie plików na serwerze, w którym szukać zdjęć. Możesz użyć zmiennych {base_path}, {core_path} lub {assets_path}.';
+$_lang['gallery.batch_upload_tags'] = 'Znaczniki, które zostaną przypisane do przesłanych zdjęć, zapisane w formie listy oddzielonej przecinkami.';
 $_lang['gallery.bytes'] = 'bajty';
-$_lang['gallery.comma_separated_list'] = 'Lista oddzielna przecinkami';
+$_lang['gallery.comma_separated_list'] = 'Lista oddzielona przecinkami';
 $_lang['gallery.clearsuccessful'] = 'Wyczyść poprawnie przesłane';
 $_lang['gallery.clearfailure'] = 'Wyczyść zakończone niepowodzeniem';
 $_lang['gallery.cover_filename'] = 'Okładka albumu';
@@ -67,7 +64,7 @@ $_lang['gallery.file_size'] = 'Wielkość pliku';
 $_lang['gallery.height'] = 'Wysokość';
 $_lang['gallery.images_selected'] = 'Zaznaczonych obrazów: [[+count]].';
 $_lang['gallery.inactive'] = 'Nieaktywny';
-$_lang['gallery.intro_msg'] = 'Tutaj możesz zarządzać swoimi albumami. Kliknij prawym przyciskiem myszy by zobaczyć więcej opcji.';
+$_lang['gallery.intro_msg'] = 'Tutaj możesz zarządzać swoimi albumami. Kliknij prawym przyciskiem myszy, by zobaczyć więcej opcji.';
 $_lang['gallery.item_active_desc'] = 'Nieaktywne obrazy nie będą widoczne publicznie w Twoich albumach.';
 $_lang['gallery.item_delete'] = 'Usuń obraz';
 $_lang['gallery.item_delete_confirm'] = 'Czy na pewno usunąć ten obraz? Ta zmiana jest nieodwracalna.';
@@ -92,8 +89,7 @@ $_lang['gallery.menu_desc'] = 'Dynamiczny system galerii.';
 $_lang['gallery.multi_item_upload'] = 'Prześlij wiele';
 $_lang['gallery.parent'] = 'Galeria nadrzędna';
 $_lang['gallery.prominent'] = 'Widoczny';
-$_lang['gallery.prominent_desc'] = 'Ustawienie albumu jako niewidocznego może być wykorzystane w celu ukrycia albumu z listy albumów (np.
- utworzenia albumu prywatnego).';
+$_lang['gallery.prominent_desc'] = 'Ustawienie albumu jako niewidocznego może być wykorzystane w celu ukrycia albumu z listy albumów (np. utworzenia albumu prywatnego).';
 $_lang['gallery.refresh'] = 'Odśwież';
 $_lang['gallery.set_as_cover'] = 'Użyj jako okładki albumu';
 $_lang['gallery.tags'] = 'Znaczniki';
@@ -104,35 +100,27 @@ $_lang['gallery.view_cover'] = 'Zobacz okładkę';
 $_lang['gallery.width'] = 'Szerokość';
 $_lang['gallery.xpdozip_err_nf'] = 'Nie można załadować klasy xPDOZip.';
 $_lang['gallery.zip_err_ns'] = 'Proszę wskazać archiwum zip.';
-$_lang['gallery.zip_err_unpack'] = 'Nie można rozpakować archiwum zip. Proszę sprawdzić czy przesłane archiwum nie jest uszkodzone oraz
-czy ustawienia ścieżek do plików galerii są poprawne.';
+$_lang['gallery.zip_err_unpack'] = 'Nie można rozpakować archiwum zip. Proszę sprawdzić czy przesłane archiwum nie jest uszkodzone oraz czy ustawienia ścieżek do plików galerii są poprawne.';
 $_lang['gallery.zip_file'] = 'Archiwum Zip';
 $_lang['gallery.zip_upload'] = 'Przesłanie archiwum Zip';
-$_lang['gallery.zip_upload_intro'] = 'Wybierz archiwum Zip zawierające obrazy do przesłania. Galeria rozpakuje archiwum i umieści obrazy
-w bieżącym albumie.';
+$_lang['gallery.zip_upload_intro'] = 'Wybierz archiwum zip zawierające obrazy do przesłania. Galeria rozpakuje archiwum i umieści obrazy w bieżącym albumie.';
 
 $_lang['area_backend'] = 'Zaplecze galerii';
 
 $_lang['setting_gallery.backend_thumb_far'] = 'Proporcje miniatur';
-$_lang['setting_gallery.backend_thumb_far_desc'] = 'Ustawienie FAR (force aspect ratio) modułu phpThumb miniatur wyświetlanych w
-panelu administracyjnym galerii.';
+$_lang['setting_gallery.backend_thumb_far_desc'] = 'Ustawienie FAR (force aspect ratio) modułu phpThumb miniatur wyświetlanych w panelu administracyjnym galerii.';
 
 $_lang['setting_gallery.backend_thumb_height'] = 'Wysokość miniatur';
-$_lang['setting_gallery.backend_thumb_height_desc'] = 'Wysokość miniatur wyświetlanych w panelu administracyjnym galerii wyrażona w
-pikselach.';
+$_lang['setting_gallery.backend_thumb_height_desc'] = 'Wysokość miniatur wyświetlanych w panelu administracyjnym galerii wyrażona w pikselach.';
 
 $_lang['setting_gallery.backend_thumb_width'] = 'Szerokość miniatur';
-$_lang['setting_gallery.backend_thumb_width_desc'] = 'Szerokość miniatur wyświetlanych w panelu administracyjnym galerii wyrażona w
-pikselach.';
+$_lang['setting_gallery.backend_thumb_width_desc'] = 'Szerokość miniatur wyświetlanych w panelu administracyjnym galerii wyrażona w pikselach.';
 
-$_lang['setting_gallery.backend_thumb_zoomcrop'] = 'Przycięcie miniatur z powiększeniem (zoomcrop)';
-$_lang['setting_gallery.backend_thumb_zoomcrop_desc'] = 'Czy użyć opcji przycięcia z powiększeniem (zoomcrop) w miniaturach wyświetlanych
- w panelu administracyjnym? Ta opcja powoduje wypełnienie całej miniatury do określonego wymiaru, przycinając jednocześnie wystające
- częsci obrazu.';
+$_lang['setting_gallery.backend_thumb_zoomcrop'] = 'Powiększenie miniatur z przycięciem (zoom crop)';
+$_lang['setting_gallery.backend_thumb_zoomcrop_desc'] = 'Czy użyć opcji powiększenia z przycięciem (zoom crop) w miniaturach wyświetlanych w panelu administracyjnym? Ta opcja powoduje wypełnienie całej miniatury do określonego wymiaru, przycinając jednocześnie wystające części obrazu.';
 
 $_lang['setting_gallery.default_batch_upload_path'] = 'Domyślny katalog obrazów przesłanych wsadowo';
 $_lang['setting_gallery.default_batch_upload_path_desc'] = 'Domyślny katalog dla obrazów przesłanych wsadowo na serwer';
 
 $_lang['setting_gallery.thumbs_prepend_site_url'] = 'Dodawaj adres strony w URL miniatur';
-$_lang['setting_gallery.thumbs_prepend_site_url_desc'] = 'Jeśli tak, adres strony będzie doklejany do URL obrazów przed przetworzniem ich
- przez phpThumb.';
+$_lang['setting_gallery.thumbs_prepend_site_url_desc'] = 'Jeśli tak, adres strony będzie doklejany do URL obrazów przed przetworzniem ich przez phpThumb.';
