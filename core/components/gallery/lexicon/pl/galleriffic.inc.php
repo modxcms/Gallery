@@ -32,4 +32,3 @@ $_lang['gallery.prev'] = 'Poprzedni';
 $_lang['gallery.slideshow_pause'] = 'Zatrzymaj pokaz slajdów';
 $_lang['gallery.slideshow_play'] = 'Odtwórz pokaz slajdów';
 $_lang['gallery.tags'] = 'Znaczniki';
-
