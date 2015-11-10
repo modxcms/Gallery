@@ -172,7 +172,10 @@ class GalleryAlbumsMediaSource extends modMediaSource implements modMediaSourceI
                     'image' => $item->get('image'),
                     'image_width' => $imageWidth,
                     'image_height' => $imageHeight,
-                    'thumb' => $item->get('thumbnail'),
+                    'thumb' => $item->get('thumbnail', array(
+                        'w' => $thumbWidth,
+                        'h' => $thumbHeight
+                    )),
                     'thumb_width' => $thumbWidth,
                     'thumb_height' => $thumbHeight,
                     'url' => $itemArray['image'],
