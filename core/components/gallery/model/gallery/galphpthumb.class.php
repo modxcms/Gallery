@@ -228,4 +228,9 @@ class galPhpThumb extends phpThumb {
         }
         return true;
     }
+
+    function DebugMessage($message, $file, $line) {
+        parent::DebugMessage($message, $file, $line);
+        $this->modx->log(modX::LOG_LEVEL_DEBUG, $message);
+    }
 }
