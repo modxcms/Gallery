@@ -39,6 +39,9 @@ $albumCoverSort = $modx->getOption('albumCoverSort',$scriptProperties,'rank');
 $albumCoverSortDir = $modx->getOption('albumCoverSortDir',$scriptProperties,'ASC');
 $showName = $modx->getOption('showName',$scriptProperties,true);
 
+$offset = isset($offset) ? (integer) $offset : 0;
+$scriptProperties['start'] = $offset;
+
 $totalProperties = $scriptProperties;
 $totalProperties['limit'] = '0';
 $totalProperties['start'] = '0';
