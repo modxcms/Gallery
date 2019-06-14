@@ -156,7 +156,6 @@ foreach ($data['items'] as $item) {
         }
     }
 
-    //$output[] = $gallery->getChunk($thumbTpl,$itemArray);
     $output[] = $parser->getChunk($thumbTpl, $itemArray);
 
     $idx++;
