@@ -39,6 +39,9 @@ $albumCoverSort = $modx->getOption('albumCoverSort',$scriptProperties,'rank');
 $albumCoverSortDir = $modx->getOption('albumCoverSortDir',$scriptProperties,'ASC');
 $showName = $modx->getOption('showName',$scriptProperties,true);
 
+$offset = isset($offset) ? (integer) $offset : 0;
+$scriptProperties['start'] = $offset;
+
 $totalProperties = $scriptProperties;
 $totalProperties['limit'] = '0';
 $totalProperties['start'] = '0';
@@ -68,6 +71,11 @@ $thumbProperties = array_merge(array(
     'far' => (string)$modx->getOption('thumbFar',$scriptProperties,'C'),
     'q' => (int)$modx->getOption('thumbQuality',$scriptProperties,90),
 ),$thumbProperties);
+
+//$pdo = $modx->getService('pdoTools'); // add
+if (class_exists('pdoTools') && $pdo = $modx->getService('pdoTools')) $parser = $pdo;
+else $parser = $gallery;
+//
 
 /* iterate */
 $output = array();
@@ -110,7 +118,7 @@ foreach ($albums as $album) {
     $albumArray['idx'] = $idx;
     $albumArray['showName'] = $showName;
     $albumArray['albumRequestVar'] = $albumRequestVar;
-    $output[] = $gallery->getChunk($rowTpl,$albumArray);
+    $output[] = $parser->getChunk($rowTpl, $albumArray);
     $idx++;
 }
 if (!isset($nav['current'])) {
