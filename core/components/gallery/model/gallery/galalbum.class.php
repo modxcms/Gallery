@@ -222,6 +222,7 @@ class galAlbum extends xPDOSimpleObject {
         if(!is_uploaded_file($filePath) && get_class($mediaSource) == 'modFileMediaSource_mysql') {
             $input = fopen($filePath, "r");
             $target = fopen($this->getPath().$shortName, "w");
+            $bytes = stream_copy_to_stream($input, $target);	
             fclose($input);
             fclose($target);
         } else {
