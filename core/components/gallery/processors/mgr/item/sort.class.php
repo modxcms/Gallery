@@ -46,22 +46,22 @@ class GalleryItemSortProcessor extends modProcessor {
         if ($source->get('rank') < $target->get('rank')) {
             $modx->exec("
                 UPDATE {$modx->getTableName('galAlbumItem')}
-                    SET rank = rank - 1
+                    SET `rank` = `rank` - 1
                 WHERE
                     album = ".$scriptProperties['album']."
-                AND rank < {$target->get('rank')}
-                AND rank > {$source->get('rank')}
-                AND rank > 0
+                AND `rank` < {$target->get('rank')}
+                AND `rank` > {$source->get('rank')}
+                AND `rank` > 0
             ");
             $newRank = $target->get('rank')-1;
         } else {
             $modx->exec("
                 UPDATE {$modx->getTableName('galAlbumItem')}
-                    SET rank = rank + 1
+                    SET `rank` = `rank` + 1
                 WHERE
                     album = ".$scriptProperties['album']."
-                AND rank >= {$target->get('rank')}
-                AND rank < {$source->get('rank')}
+                AND `rank` >= {$target->get('rank')}
+                AND `rank` < {$source->get('rank')}
             ");
             $newRank = $target->get('rank');
         }

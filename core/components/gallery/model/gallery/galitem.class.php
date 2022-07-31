@@ -279,7 +279,7 @@ class galItem extends xPDOSimpleObject {
         }
 
         /* fix old album ranks */
-        $sql = 'UPDATE '.$this->xpdo->getTableName('galAlbumItem').' SET rank = rank - 1 WHERE rank >= '.$oldRank.' AND album = '.$oldAlbum;
+        $sql = 'UPDATE '.$this->xpdo->getTableName('galAlbumItem').' SET `rank` = `rank` - 1 WHERE `rank` >= '.$oldRank.' AND album = '.$oldAlbum;
         $this->xpdo->exec($sql);
 
         /* move actual file */

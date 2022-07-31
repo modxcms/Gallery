@@ -65,7 +65,10 @@ class GalleryAlbumListInputRender extends modTemplateVarInputRender
         if (empty($params)) $params = array();
 
         /* setup default properties */
-        $sort = $this->modx->getOption('sort',$params,'rank');
+        $sort = $this->modx->getOption('sort',$params,'`rank`');
+        if (strtolower($sort) == 'rank'){
+            $sort = '`rank`';
+        }
         $dir = $this->modx->getOption('dir',$params,'ASC');
         $limit = (int)$this->modx->getOption('limit',$params,0);
         $start = (int)$this->modx->getOption('start',$params,0);
@@ -125,7 +128,7 @@ class GalleryAlbumListInputRender extends modTemplateVarInputRender
                 $c->where(array(
                     'AlbumItems.album' => $album->get('id'),
                 ));
-                $c->sortby('rank','ASC');
+                $c->sortby('`rank`','ASC');
                 $c->limit(1);
                 $coverItem = $this->modx->getObject('galItem',$c);
             }

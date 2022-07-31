@@ -139,9 +139,9 @@ class galAlbum extends xPDOSimpleObject {
 
         $movingDown = $newRank > $oldRank;
         if ($movingDown) {
-            $sql = 'UPDATE '.$this->xpdo->getTableName('galAlbum').' SET rank = rank - 1 WHERE rank >= '.$oldRank.' AND rank <= '.$newRank.' AND parent = '.$this->get('parent');
+            $sql = 'UPDATE '.$this->xpdo->getTableName('galAlbum').' SET `rank` = `rank` - 1 WHERE `rank` >= '.$oldRank.' AND `rank` <= '.$newRank.' AND parent = '.$this->get('parent');
         } else {
-            $sql = 'UPDATE '.$this->xpdo->getTableName('galAlbum').' SET rank = rank + 1 WHERE rank > '.$newRank.' AND rank <= '.$oldRank.' AND parent = '.$this->get('parent');
+            $sql = 'UPDATE '.$this->xpdo->getTableName('galAlbum').' SET `rank` = `rank` + 1 WHERE `rank` > '.$newRank.' AND `rank` <= '.$oldRank.' AND parent = '.$this->get('parent');
         }
         $this->xpdo->exec($sql);
 
@@ -166,7 +166,7 @@ class galAlbum extends xPDOSimpleObject {
 
         if ($moved) {
             /* Recalculate ranks of old parent */
-            $sql = 'UPDATE '.$this->xpdo->getTableName('galAlbum').' SET rank = rank - 1 WHERE rank >= '.$oldRank.' AND parent = '.$oldParent;
+            $sql = 'UPDATE '.$this->xpdo->getTableName('galAlbum').' SET `rank` = `rank` - 1 WHERE `rank` >= '.$oldRank.' AND parent = '.$oldParent;
             $this->xpdo->exec($sql);
         }
         return $moved;
@@ -425,7 +425,10 @@ class galAlbum extends xPDOSimpleObject {
                 $albums[] = $album;
             }
         } else {
-            $sort = $modx->getOption('sort',$scriptProperties,'rank');
+            $sort = $modx->getOption('sort',$scriptProperties,'`rank`');
+            if (strtolower($sort) == 'rank'){
+                $sort = '`rank`';
+            }
             $dir = $modx->getOption('dir',$scriptProperties,'DESC');
             $limit = $modx->getOption('limit',$scriptProperties,10);
             $start = $modx->getOption('start',$scriptProperties,0);
