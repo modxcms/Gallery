@@ -27,7 +27,7 @@ $xpdo_meta_map['galTag']= array (
     'tag' => 
     array (
       'dbtype' => 'varchar',
-      'precision' => '255',
+      'precision' => '250',
       'phptype' => 'string',
       'null' => false,
       'default' => '',
