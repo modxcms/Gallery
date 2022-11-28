@@ -250,7 +250,7 @@ class GalleryAlbumsMediaSource extends modMediaSource
      * @param string $newName
      * @return boolean
      */
-    public function renameContainer(string $oldPath, string $newName): bool
+    public function renameContainer($oldPath, $newName)
     {
         return false;
     }
@@ -263,7 +263,7 @@ class GalleryAlbumsMediaSource extends modMediaSource
      * @param array $objects
      * @return boolean
      */
-    public function uploadObjectsToContainer(string $container, array $objects = array()): bool
+    public function uploadObjectsToContainer($container, array $objects = [])
     {
         return false;
     }
@@ -275,7 +275,7 @@ class GalleryAlbumsMediaSource extends modMediaSource
      * @param string $objectPath
      * @return boolean
      */
-    public function getObjectContents(string $objectPath): bool
+    public function getObjectContents($path)
     {
         return false;
     }
@@ -288,7 +288,7 @@ class GalleryAlbumsMediaSource extends modMediaSource
      * @param string $content
      * @return boolean
      */
-    public function updateObject($objectPath,$content): bool
+    public function updateObject($path, $content)
     {
         return false;
     }
@@ -301,7 +301,7 @@ class GalleryAlbumsMediaSource extends modMediaSource
      * @param string $content
      * @return boolean|string
      */
-    public function createObject(string $objectPath, string $name, string $content) {
+    public function createObject($path, $name, $content) {
         return false;
     }
 
@@ -312,7 +312,7 @@ class GalleryAlbumsMediaSource extends modMediaSource
      * @param string $objectPath
      * @return boolean
      */
-    public function removeObject(string $objectPath): bool
+    public function removeObject($path)
     {
         return false;
     }
@@ -325,7 +325,7 @@ class GalleryAlbumsMediaSource extends modMediaSource
      * @param string $newName
      * @return bool
      */
-    public function renameObject(string $oldPath, string $newName): bool
+    public function renameObject($oldPath, $newName)
     {
         return false;
     }
@@ -337,7 +337,7 @@ class GalleryAlbumsMediaSource extends modMediaSource
      * @param array $parameters
      * @return string
      */
-    public function getOpenTo(string $value, array $parameters = array()): string
+    public function getOpenTo($value, array $parameters = [])
     {
         return '';
     }
@@ -349,7 +349,7 @@ class GalleryAlbumsMediaSource extends modMediaSource
      * @param string $object An optional file to find the base path with
      * @return string
      */
-    public function getBasePath(string $object = ''): string
+    public function getBasePath($object = '')
     {
         return '';
     }
@@ -362,7 +362,7 @@ class GalleryAlbumsMediaSource extends modMediaSource
      * @param string $object
      * @return void
      */
-    public function getBaseUrl(string $object = ''): void
+    public function getBaseUrl($object = '')
     {
     }
 
@@ -374,7 +374,7 @@ class GalleryAlbumsMediaSource extends modMediaSource
      * @param string $object
      * @return void
      */
-    public function getObjectUrl($object = ''): void
+    public function getObjectUrl($object = '')
     {
     }
 
@@ -386,7 +386,7 @@ class GalleryAlbumsMediaSource extends modMediaSource
      * @param string $point
      * @return boolean
      */
-    public function moveObject(string $from, string $to, string $point = 'append', $to_source = 0): bool
+    public function moveObject($from, $to, $point = 'append', $to_source = 0)
     {
         $from = explode('-',$from);
         if (empty($from[1])) {
@@ -474,7 +474,7 @@ class GalleryAlbumsMediaSource extends modMediaSource
      * Get the name of this source type, ie, "File System"
      * @return string
      */
-    public function getTypeName(): string
+    public function getTypeName()
     {
         $this->xpdo->lexicon->load('gallery:source');
         return $this->xpdo->lexicon('gallery.source_name');
@@ -484,7 +484,7 @@ class GalleryAlbumsMediaSource extends modMediaSource
      * Get a short description of this source type
      * @return string
      */
-    public function getTypeDescription(): string
+    public function getTypeDescription()
     {
         $this->xpdo->lexicon->load('gallery:source');
         return $this->xpdo->lexicon('gallery.source_desc');
@@ -495,7 +495,7 @@ class GalleryAlbumsMediaSource extends modMediaSource
      * properties for your source type.
      * @return array
      */
-    public function getDefaultProperties(): array
+    public function getDefaultProperties()
     {
         return array(
 
