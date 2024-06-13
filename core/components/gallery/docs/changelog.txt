@@ -1,5 +1,16 @@
 Changelog for Gallery.
 
+Gallery 2.0.2
+====================================
+- Fix function declaration for MODX 3
+- Fix schema
+- Improved MySQL 8 compatibility
+- Add pagination support to GalleryAlbums
+
+Gallery 2.0.1
+====================================
+Fix Multi-Upload
+
 Gallery 2.0.0
 ====================================
 - Fixed to work with MODX 3
