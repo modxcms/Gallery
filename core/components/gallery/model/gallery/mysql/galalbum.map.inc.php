@@ -36,7 +36,7 @@ $xpdo_meta_map['galAlbum']= array (
     'name' => 
     array (
       'dbtype' => 'varchar',
-      'precision' => '255',
+      'precision' => '250',
       'phptype' => 'string',
       'null' => false,
       'default' => '',
