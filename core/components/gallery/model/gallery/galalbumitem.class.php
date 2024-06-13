@@ -29,9 +29,9 @@ class galAlbumItem extends xPDOSimpleObject {
         $this->set('rank',$newRank);
         $movingDown = $newRank > $oldRank;
         if ($movingDown) {
-            $sql = 'UPDATE '.$this->xpdo->getTableName('galAlbumItem').' SET rank = rank - 1 WHERE rank >= '.$oldRank.' AND rank <= '.$newRank.' AND album = '.$this->get('album');
+            $sql = 'UPDATE '.$this->xpdo->getTableName('galAlbumItem').' SET `rank` = `rank` - 1 WHERE `rank` >= '.$oldRank.' AND `rank` <= '.$newRank.' AND album = '.$this->get('album');
         } else {
-            $sql = 'UPDATE '.$this->xpdo->getTableName('galAlbumItem').' SET rank = rank + 1 WHERE rank >= '.$newRank.' AND rank <= '.$oldRank.' AND album = '.$this->get('album');
+            $sql = 'UPDATE '.$this->xpdo->getTableName('galAlbumItem').' SET `rank` = `rank` + 1 WHERE `rank` >= '.$newRank.' AND `rank` <= '.$oldRank.' AND album = '.$this->get('album');
         }
         $this->xpdo->exec($sql);
         return $this->save();

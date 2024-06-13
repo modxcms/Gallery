@@ -49,7 +49,7 @@ class GalleryAlbumsMediaSource extends modMediaSource
             } else {
                 $c = $this->xpdo->newQuery('galAlbum');
                 $c->where(array('parent' => 0));
-                $c->sortby('rank','ASC');
+                $c->sortby('`rank`','ASC');
                 $albums = $this->xpdo->getCollection('galAlbum',$c);
                 /** @var galAlbum $album */
                 foreach ($albums as $album) {
@@ -72,7 +72,7 @@ class GalleryAlbumsMediaSource extends modMediaSource
 
             $c = $this->xpdo->newQuery('galAlbum');
             $c->where(array('parent' => $id));
-            $c->sortby('rank','ASC');
+            $c->sortby('`rank`','ASC');
             $albums = $this->xpdo->getCollection('galAlbum',$c);
             /** @var galAlbum $album */
             foreach ($albums as $album) {

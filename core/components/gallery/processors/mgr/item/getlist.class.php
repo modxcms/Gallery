@@ -28,7 +28,7 @@
 class GalleryItemGetListProcessor extends modObjectGetListProcessor {
     public $classKey = 'galItem';
     public $objectType = 'gallery.item';
-    public $defaultSortField = 'rank';
+    public $defaultSortField = '`rank`';
     public $defaultSortDirection = 'ASC';
     public $languageTopics = array('gallery:default');
 
@@ -63,7 +63,7 @@ class GalleryItemGetListProcessor extends modObjectGetListProcessor {
             ) AS tags'
         ));
         $c->groupBy('id');
-        $c->groupBy('rank');
+        $c->groupBy('`rank`');
         return $c;
     }
 
