@@ -49,7 +49,6 @@ class GalleryPhpthumbProcessor extends modProcessor {
             $ext = pathinfo($src, PATHINFO_EXTENSION);
             $ext = strtolower($ext);
             switch ($ext) {
-                case 'jpeg':
                 case 'png':
                 case 'gif':
                 case 'bmp':
@@ -57,7 +56,6 @@ class GalleryPhpthumbProcessor extends modProcessor {
                 case 'avif':
                 case 'text':
                 case 'ico':
-                case 'bmp':
                     $ptOptions['f'] = $ext;
                     break;
                 default:
@@ -66,7 +64,7 @@ class GalleryPhpthumbProcessor extends modProcessor {
             }
         }
 
-        $availableFormats = array('webp', 'gif', 'avif', 'webp', 'png', 'jpeg', 'jpg', 'bmp', 'ico', 'text');
+        $availableFormats = array('jpeg', 'png', 'gif', 'bmp', 'webp', 'avif', 'text', 'ico');
         if (!in_array($ptOptions['f'], $availableFormats)) {
             $ptOptions['f'] = 'jpeg';
         }
