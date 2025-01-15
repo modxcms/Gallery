@@ -66,7 +66,7 @@ class GalleryPhpthumbProcessor extends modProcessor {
             }
         }
 
-        $availableFormats = array('wbmp', 'gif', 'avif', 'webp', 'png', 'jpeg', 'jpg', 'bmp', 'ico', 'text');
+        $availableFormats = array('webp', 'gif', 'avif', 'webp', 'png', 'jpeg', 'jpg', 'bmp', 'ico', 'text');
         if (!in_array($ptOptions['f'], $availableFormats)) {
             $ptOptions['f'] = 'jpeg';
         }
