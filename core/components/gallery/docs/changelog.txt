@@ -1,5 +1,9 @@
 Changelog for Gallery.
 
+Gallery 2.0.3
+====================================
+- Critical Fix: Force validation on "f" output parameter
+
 Gallery 2.0.2
 ====================================
 - Fix function declaration for MODX 3
