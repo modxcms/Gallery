@@ -119,6 +119,9 @@ foreach($keys as $key) {
 }
 ksort($nthTpls);
 
+if (class_exists('pdoTools') && $pdo = $modx->getService('pdoTools')) $parser = $pdo;
+else $parser = $gallery;
+
 foreach ($data['items'] as $item) {
     $itemArray = $item->toArray();
     $itemArray['idx'] = $idx;
@@ -156,7 +159,7 @@ foreach ($data['items'] as $item) {
         }
     }
 
-    $output[] = $gallery->getChunk($thumbTpl,$itemArray);
+    $output[] = $parser->getChunk($thumbTpl, $itemArray);
 
     $idx++;
 }
@@ -165,7 +168,7 @@ $output = implode("\n",$output);
 /* if set, place in a container tpl */
 $containerTpl = $modx->getOption('containerTpl',$scriptProperties,false);
 if (!empty($containerTpl)) {
-    $ct = $gallery->getChunk($containerTpl,array(
+    $ct = $parser->getChunk($containerTpl,array(
         'thumbnails' => $output,
         'album_name' => $data['album']['name'],
         'album_description' => $data['album']['description'],
