@@ -33,7 +33,7 @@ $_lang['gallery.album']                         = 'Album';
 $_lang['gallery.album_create']                  = 'Album erstellen';
 $_lang['gallery.album_err_nf']                  = 'Album nicht gefunden.';
 $_lang['gallery.album_err_ns']                  = 'Album nicht angegeben.';
-$_lang['gallery.album_err_ns_name']             = 'Bitte geben Sie einen g&uuml;ltigen Namen für dieses Album ein.';
+$_lang['gallery.album_err_ns_name']             = 'Bitte geben Sie einen g&uuml;ltigen Namen fÃ¼r dieses Album ein.';
 $_lang['gallery.album_err_remove']              = 'Beim Entfernen dieses Albums ist ein Fehler aufgetreten.';
 $_lang['gallery.album_err_save']                = 'Beim Speichern dieses Albums ist ein Fehler aufgetreten.';
 $_lang['gallery.album_remove']                  = 'Album entfernen';
@@ -94,10 +94,11 @@ $_lang['gallery.upload']                        = 'Upload';
 $_lang['gallery.width']                         = 'Breite';
 $_lang['gallery.xpdozip_err_nf']                = 'Klasse xPDOZip konnte nicht geladen werden.';
 $_lang['gallery.zip_err_ns']                    = 'Bitte geben Sie eine ZIP Datei an.';
-$_lang['gallery.zip_err_unpack']                = 'ZIP Datei konnte nicht entpackt werden. Bitte stellen Sie sicher, dass die Datei nicht beschädigt, und der Galerie-Pfad korrekt ist.';
+$_lang['gallery.zip_err_unpack']                = 'ZIP Datei konnte nicht entpackt werden. Bitte stellen Sie sicher, dass die Datei nicht beschÃ¤digt, und der Galerie-Pfad korrekt ist.';
 $_lang['gallery.zip_file']                      = 'Zip Datei';
 $_lang['gallery.zip_upload']                    = 'Zip Upload';
 $_lang['gallery.zip_upload_intro']              = 'Geben Sie eine ZIP Datei an die Bilder enthaelt. Die Datei wird automatisch entpackt und die Bilder in das Album uebertragen.';
+$_lang['gallery.file_upload']                   = 'Select Images';
 
 
 $_lang['area_backend']                                   = 'Backend';
