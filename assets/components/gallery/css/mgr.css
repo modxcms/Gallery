@@ -4,7 +4,7 @@
     width: 4px;
 }
 .gal-item-inactive {
-    opacity: 0.5;
+    opacity: 0.5 !important;
 }
 /* unnecessary as defined in default styles */
 /*.green { color: green; }
