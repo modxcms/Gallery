@@ -31,7 +31,7 @@ GAL.BrowserWindow = function(config) {
         ,listeners: {'select':{fn:this.onSelect,scope:this}}
     });
     this.view.pagingBar = new Ext.PagingToolbar({
-        pageSize: 24
+        pageSize: config.pageSize || (parseInt(MODx.config.default_per_page) || 24)
         ,store: this.view.store
         ,displayInfo: true
         ,autoLoad: true

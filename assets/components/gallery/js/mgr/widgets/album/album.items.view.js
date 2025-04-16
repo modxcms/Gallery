@@ -10,6 +10,8 @@ GAL.view.AlbumItems = function(config) {
         ,baseParams: {
             action: 'mgr/item/getlist'
             ,album: config.album
+            ,start: 0
+            ,limit: config.pageSize || (parseInt(MODx.config.default_per_page) || 24)
         }
         ,loadingText: _('loading')
         ,tpl: this.templates.thumb
@@ -293,4 +295,3 @@ Ext.extend(GAL.view.AlbumItems,MODx.DataView,{
     }
 });
 Ext.reg('gal-view-album-items',GAL.view.AlbumItems);
-
