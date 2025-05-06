@@ -53,10 +53,10 @@ class GalleryAlbumGetNodesProcessor extends modObjectProcessor {
             $albumArray['parent'] = 0;
 
             $version = $this->modx->getVersionData();
-            if ($version['major_version'] < 3) {
+            if ($version['version'] < 3) {
                 $albumArray['cls'] = 'icon-tiff'.($album->get('active') ? '' : ' gal-item-inactive');
             } else {
-                $albumArray['iconCls'] = 'icon icon-tiff'.($album->get('active') ? '' : ' gal-item-inactive');
+                $albumArray['iconCls'] = 'icon-tiff'.($album->get('active') ? '' : ' gal-item-inactive');
             }
 
             $albumArray['classKey'] = 'galAlbum';
