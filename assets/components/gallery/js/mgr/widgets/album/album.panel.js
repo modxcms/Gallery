@@ -234,7 +234,7 @@ GAL.panel.AlbumItems = function(config) {
             ,_('per_page')+':'
             ,{
                 xtype: 'textfield'
-                ,value: config.pageSize || (parseInt(MODx.config.default_per_page) || 20)
+                ,value: config.pageSize || (parseInt(MODx.config.default_per_page) || 24)
                 ,width: 40
                 ,listeners: {
                     'change': {fn:function(tf,nv,ov) {
