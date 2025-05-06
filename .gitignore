@@ -5,3 +5,5 @@ nbproject
 _packages/*.*
 !_packages/.gitignore
 !_packages/*.zip
+
+vendor
