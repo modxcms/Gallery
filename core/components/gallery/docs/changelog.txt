@@ -1,5 +1,12 @@
 Changelog for Gallery.
 
+Gallery 2.0.4
+====================================
+- Fix media source class key when upgrading from MODX 2
+- Add Italian lexicon
+- Fix issue with getNodes
+- Fix text on multi-upload button
+
 Gallery 2.0.3
 ====================================
 - Critical Fix: Force validation on "f" output parameter
