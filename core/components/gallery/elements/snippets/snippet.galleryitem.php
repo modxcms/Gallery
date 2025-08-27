@@ -124,6 +124,10 @@ if ($toPlaceholders) {
     return '';
 }
 
+if (class_exists('pdoTools') && $pdo = $modx->getService('pdoTools')) $parser = $pdo;
+else $parser = $gallery;
+
 if (empty($tpl)) return '';
-$output .= $gallery->getChunk($tpl,$itemArray);
+$output .= $parser->getChunk($tpl, $itemArray);
+
 return $output;
