@@ -1,5 +1,10 @@
 Changelog for Gallery.
 
+Gallery 2.0.5
+====================================
+- Fix thumbnails in Gallery Albums Media Source
+- Harden web/phpthumb processor
+
 Gallery 2.0.4
 ====================================
 - Fix media source class key when upgrading from MODX 2
