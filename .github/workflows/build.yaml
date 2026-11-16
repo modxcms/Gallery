@@ -40,8 +40,6 @@ jobs:
             cd /www/pkgs/gallery/core/components/gallery/
             /home/.bin/composer install --no-dev
             cd /www/pkgs/gallery/
-            npm install
-            npm run build
             rm -rf _packages
             /www/pkgs/gpm/cli/bin/gpm package:update --pkg gallery --updateDB=alter
             /www/pkgs/gpm/cli/bin/gpm package:build --pkg gallery
