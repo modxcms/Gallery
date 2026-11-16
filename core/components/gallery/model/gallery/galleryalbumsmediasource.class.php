@@ -180,6 +180,15 @@ class GalleryAlbumsMediaSource extends modMediaSource implements modMediaSourceI
                     'fullRelativeUrl' => $itemArray['relativeImage'],
                 );
             }
+
+            $modx_version = $this->xpdo->getVersionData();
+            if (version_compare($modx_version['full_version'], '2.8.0-pl') >= 0) {
+                // For MODX versions newer or equal to 2.8.0, undo any ampersand encoding (as it will be done in JS)
+                $list = array_map(function($item) {
+                    $item['thumb'] = str_replace('&amp;', '&', $item['thumb']);
+                    return $item;
+                }, $list);
+            }
         }
         return $list;
     }

@@ -187,12 +187,13 @@ class GalleryAlbumsMediaSource extends modMediaSource
                     'image' => $item->get('image'),
                     'image_width' => $imageWidth,
                     'image_height' => $imageHeight,
-                    'thumb' => $item->get('thumbnail'),
+                    'thumb' => str_replace('&amp;', '&', $item->get('thumbnail')),
                     'thumb_width' => $thumbWidth,
                     'thumb_height' => $thumbHeight,
                     'url' => $itemArray['image'],
                     'relativeUrl' => $itemArray['relativeImage'],
                     'fullRelativeUrl' => $itemArray['relativeImage'],
+                    'preview' => 1
                 );
             }
         }
